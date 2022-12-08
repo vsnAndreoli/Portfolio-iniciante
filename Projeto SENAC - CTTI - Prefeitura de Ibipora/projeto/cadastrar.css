@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: #000;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: #ffffff80;
+    width:400px ;
+    padding: 30px;
+    border-radius: 4%;
+    box-shadow: 3px 3px 1px 0px #00000080;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(47,47,87);
+}
+
+#msgErro {
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+#msgSucesso {
+    text-align: center;
+    color: #00bb00;
+    background-color: #bbffbe;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+.rotulo-flutuante input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom:  2px solid rgb(47, 47, 87);
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+.rotulo-flutuante {
+    position: relative;
+    padding-top: 15px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.fa-eye, .fa-eye-slash {
+    position: absolute;
+    top: 50%;
+    right:  0px;
+    color: rgb(47, 47, 87);
+    cursor: pointer;
+}
+/*<i class="fa-solid fa-eye-slash"></i>*/
+.rotulo-flutuante input:focus {
+    border-bottom: 3px solid rgb(100, 100, 160);
+}
+.rotulo-flutuante label {
+    color: rgb(47, 47, 87);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    margin: 15px;
+    transition: all .3s ease-out;
+}
+.rotulo-flutuante input:focus + label,
+.rotulo-flutuante input:valid + label {
+    font-size: 15px;
+    margin-top: 0;
+    color: rgb(100, 100, 160);
+    transition: .3s;
+}
+
+button {
+    background-color: transparent;
+    border-color:rgb(47, 47, 87);
+    color: rgb(47, 47, 87);
+    padding:  7px;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+}
+button:hover{
+    background-color: rgb(47, 47, 87);
+    color: white;
+}
+.centralizado {
+    display: flex;
+    justify-content: center;
+}
