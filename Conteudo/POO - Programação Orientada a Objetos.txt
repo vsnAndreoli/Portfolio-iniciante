@@ -1,0 +1,35 @@
+Classe Pessoa
+--------------------------------------
+Atributos/Características=
+
+Nome:
+Idade
+Raça
+Peso:
+Altura:
+--------------------------------------
+Método/Ação:Sentar()
+
+Se (sentar) então
+Escreva: "Sentado."
+senao
+Escreva: "Em pé"
+
+ Fim se
+FimMetodo
+
+Metodo Sentar()
+Sentado = True
+
+Fim Classe
+
+
+
+
+
+
+
+
+
+
+

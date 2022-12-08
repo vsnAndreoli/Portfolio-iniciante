@@ -1,0 +1,11 @@
+Não podemos 'manipular', tudo de uma vez ou várias linhas ao mesmo tempo.
+
+Um comando, manipula 1 linha.
+Mas em uma "linha", é possível manipular várias "colunas"
+Utilizando o comando UPDATE.
+
+UPDATE curso SET nome = "Internet";
+
+Gerenciamento de Cópias de Segurança
+Backup binário e Backup de dados
+ADM - -> Data Export

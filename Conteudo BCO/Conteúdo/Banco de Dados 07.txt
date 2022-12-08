@@ -1,0 +1,14 @@
+Funções de agregação
+São cinco as funções básicas de agrupamento:
+
+AVG: Retorna a média do campo especificado.
+comando: SELECT AVG(valor) FROM tabela;
+
+MIN/MAX/SUM: Respectivamente retorna o MENOR valor, o MAIOR valor e o SOMATÓRIO de um grupo de registros.
+comando: SELECT MIN(valor)FROM tabela;
+         SELECT MAX(valor)FROM tabela;
+         SELECT SUM(valor)FROM tabela;
+
+COUNT: Retorna a quantidade de itens da seleção.
+comando: COUNT(nome) FROM tabela;
+

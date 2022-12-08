@@ -1,0 +1,44 @@
+LOCALHOST [__________
+ROOT
+SENHA
+BANCO
+
+MySQL_Workbench
+
+Para criar um novo Banco de Dados, usamos a linha de comando: CREATE DATABASE IF NOT EXISTS (nome do banco);
+(Ícone de RAIO = Executar a linha)
+
+--SQL
+-Comandos SQL mais importantes
+
+SELECT - extrai dados de um banco de dados
+UPDATE - atualiza os dados de um banco de dados
+DELETE - exclui dados de um banco de dados
+INSERT INTO - insere novos dados em um banco de dados
+CREATE DATABASE - cria um novo banco de dados
+CREATE TABLE - cria uma nova tabela
+ALTER TABLE - modifica uma tabela
+DROP TABLE -exclui uma tabela
+
+CRUD - 
+C= CREATE
+R= READ
+U= UPDATE
+D= DELETE
+
+ALTER TABLE
+Usada para add excl ou mod colunas em uma tabela existente, pode também ser usada para adicionar e eliminar várias restrições em uma tabela existente.
+
+ALTER TABLE "NOME DA TABELA"
+ 
+ADD COLUMN "COLUNA A SER ADD" VARCHAR(15);
+
+DESCRIBE*FROM "nome" 
+
+Eliminar colunas
+ALTER TABLE "nome da tabela"
+DROP COLUMN "nome da coluna"
+
+Agora que apagameos, vamos inserir novamente, mudando a posição dela:
+ALTER TABLE "nome da tabela"
+ADD COLUMN "nome da coluna" VARCHAR(10) !!AFTER!! nome;

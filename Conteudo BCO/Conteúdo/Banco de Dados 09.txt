@@ -1,0 +1,2 @@
+mySQL i -->(chamar a função e determinar os parâmetros)
+PDO-->

@@ -1,0 +1,27 @@
+POO
+-Característica
+Cor
+.Modelo
+.Marca
+.Ano de fabricação
+.Chassi
+.Peso
+.Potência
+.Situação
+
+-Método
+.
+.
+.
+.
+.
+-Estado/Funções
+.Ligar/Desligar
+.Andar
+.Correr
+.Frear
+
+
+-------------------------------------
+Construir uma classe(molde) --> Classe(Características, funções).
+Parâmetro --> Informação fornecida.

@@ -1,0 +1,41 @@
+MySQL_WORKBENCH
+
+"Em alguns bancos de dados, a máscara de filtro não é representada por%."
+
+Por padrão, a SQL diferencia caixa baixa de caixa alta.
+Para eliminar essa diferença, utiliza a função UPPER. Veja abaixo:
+
+SELECT idcurso,nome FROM cursos
+
+WHERE UPPER(descricao) LIKE 'Curso%Programação%';
+
+Case Sensitive - CS
+Case Insensitive - CI
+
+Distinct -
+Esta instrução é usada para retornar apenas valores "distintos" em um mar de resultados diversos com repetições.
+
+Considere apenas 1 ocorrÊncia de cada "valor", independente da quantidade ou tipo, o que importa são os "valores".
+
+SELECT DISTINCT carga FROM cursos;
+
+SELECT DISTINCT localdiade FROM cursos;
+
+ORDER BY localidade;
+
+Ordenação
+
+A ordenação pode ser definida com a cláusula OREDER BY.
+
+Assim como no comando WHERE, o campo de ordenação não precisa estar listado como campo de visualização.
+
+SELECT idcurso, nome FROM cursos ORDER BY nome;
+
+Modo decrescente usar o "DESC" A utilização da palavra DESC garante a ordenação invertida.
+
+Ou seja:
+
+SELECT idcurso, nome FROM cursos
+ORDER BY nome DESC;
+
+

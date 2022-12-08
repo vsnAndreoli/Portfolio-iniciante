@@ -1,0 +1,53 @@
+Comando: SELECT
+
+É a parte integrante e primordial da linguagem SQL que nasceu junto com a teoria dos bancos de dados relacionais.
+
+Ele traz resultados funcionais, trazendo resultados agrupados, classificados e detalhados.
+
+O uso do SELECT utilizando a cláusula FROM:
+SELECT codigo, nome FROM clientes;
+(selecionar "codigo, nome" do local "clientes")
+
+SELECT*FROM cliente
+(busque todas as colunas da tabela CLIENTES)
+
+"Váriavel "NOME''
+
+Nome [RECEBE] (marcelo, fabiana, guilherme, etc)
+
+Matriz (tabela de dados, coluna de dados, dados cruzados)
+
+Comando WHERE
+
+É a cláusula responsável por filtrar resutlados.
+ex:
+SELECT idcurso, nome FROM cursos
+WHERE idcurso = 10;
+
+Operadores Lógicos: (AND - OR)
+Operadores comparativos: " != " // "<>" (diferente)
+
+
+Operador "BETWEEN" -Recebe um valor mínimo e máximo e retorna os dados da coluna que atendem os critérios.
+
+Operador "IN" (entre) - Nesta cláusula, diferentemente do between, aqui teremos que "especificar" as faixas e os valores
+
+--O BETWEEN seria valores "ENTRE", e o IN seria valores ESPECÍFICOS.
+
+
+Operador comparativo "LIKE" (busca parcial de texto), funciona como um filtro.
+
+% - Este carcter(%) é um "coringa". Esse caractér substitui nenhum ou vários caracteres.
+
+O LIKE NÃO é "case sensitive", quer dizer que não diferencia carcteres maíusculos e minúsculos.
+
+No MySQL, se você estiver utilizando a configuração UTF8, então um "a" com acentuação é considerado também um "a".
+Em bancos isso já não é a realidade.
+
+O SELECT com WHERE usando LIKE é uma das premissas que mais serão utilizadas em um sistema, pois através deles podemos realizar buscar por "pedaços" de qualquer coisa.
+
+
+
+
+
+

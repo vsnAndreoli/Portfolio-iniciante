@@ -1,0 +1,40 @@
+Banco de dados
+
+--Cadastro
+-Arquivamento de informações (registro --> pasta/tabelas --> banco de dados)
+
+1960 --> Guerra fria --> Codasyl --> Linguagem COBOL (Primeira linguagem dedicada a fazer acesso ao banco de dados).
+
+SQL --> Padronização --> ISO e ANSI
+
+SQL (O que podemos fazer com o SQL?)
+
+
+
+--CRUD (Create, Read, Update e Delete)
+DDL - Criar, alterar, exclusão
+DML - Inserção, update e exclusão
+DCL - Consede privilégios e retira privilégios do usuário
+
+
+--SQL
+
+--Comandos
+primary key(id)
+Unique
+Unsigned
+Default
+
+--Comandos primitivos
+Inteiro: TinyInt, SmallInt, Int, mediumInt, BigInt
+Real: Decimal, Float, Double, Real
+Lógico: Bit, Boolean(true e false)
+
+--Data/Tempo: Date, DateTime, TimeStamp, Time, Year
+--Literal 
+Caractere: VarChar, Char
+Texto: TinyText, Text, MediumText, LongText
+Binário: TinyBlob, Blob, MediumBlob, LongBlob
+Coleção: Enum, Set
+
+--Espacial: Geometry, Point, Polygon, MultiPolygon

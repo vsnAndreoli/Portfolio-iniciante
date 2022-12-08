@@ -1,0 +1,43 @@
+Cláusula de agrupamento
+
+Um podereoso recurso de comando SLEECT é o parâmentro GROUP BY.
+ps: Através dele podemos retornar informações agruapdas de um conjunto de registros, estabelecendo uma condição de agrupamento. É um recurso muito utilizado na ciração de relatórios.
+
+SELECT carga FROM cursos GROUP BY carga;
+
+Esse comando acima retornará as cargas "Agrupadas" por valores.
+
+Agrupando e Agregando
+ex:
+SELECT*FROM cursos WHERE totaulas >20;
+
+SELECT*FROM cursos WHERE totaulas =30;
+
+
+SELECT carga FROM cursos WHERE totaulas=30 GROUP BY carga;
+
+
+SELECT carga, COUNT(nome) FROM cursos WHERE totaulas = 30 GROUP BY carga;
+
+
+SELECT*FROM cursos WHERE totaulas=30;
+
+É também possível agrupar os itens selecionados.
+
+HAVING
+Através desse comando podemos filtrar a cláusula GROUP BY.
+
+SELECT carga, COUNT(nome) FROM cursos GROUP BY carga;
+**Queremos agrupar apenas quem tem o Contador superior a 3.
+SELECT carga, COUNT(NOME) FROM cursos GROUP BY carga HAVING COUNT(nome)>3;
+
+O HAVING para o GROUP BY, é mais ou menos semelhante ao WHERE para o SELECT.
+Dentro do HAVING, só podemos trabalhar com o campo que agrupamos.
+
+Utilizando a clausula WHERE, o HAVING funcionará.
+
+SELECT ano,COUNT(*)FROM cursos WHERE totaulas >30 GROUP BY ano HAVING ano>2020 ORDER BY COUNT(*)DESC;
+
+Nós podemos Selecionar, Filtrar, Agrupar e dizer dentro deste agrupamento, qual queremos "Exibir".
+Desta forma podemos utilizar o SELECT, WHERE, o GROUP BY e o HAVING.
+
