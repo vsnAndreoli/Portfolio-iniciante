@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POO</title>
+</head>
+<body>
+    <script>
+        class Carro {
+            constructor(cor, modelo, marca, anoF) {
+                //cor = "Rosa"
+                this.cor = cor
+                this.modelo = modelo
+                this.marca = marca
+                this.anoF = anoF
+                this.chassi = "123456789-ab-123456789"
+                this.peso = 1100
+                this.potencia = 100
+                this.situacao = "ligado"
+                console.log("Olá, carro instanciado na cor " + this.cor + "," + this.modelo + "," + this.marca + "," + this.anoF + "," + this.chassi + "," + this.peso + "," + this.potencia + "," + this.situacao)
+            }
+            informar() {
+                console.log("Informações do Veiculo: ")
+                console.log("Cor......:" + this.cor)
+                console.log("Modelo...:" + this.modelo)
+                console.log("Marca....:" + this.marca)
+                console.log("Ano......:" + this.anoF)
+                console.log("Chassi...:" + this.chassi)
+                console.log("Peso.....:" + this.peso)
+                console.log("Potencia.:" + this.potencia)
+                console.log("Situação.:" + this.situacao)
+            }
+        }
+        let c1 = new Carro("Rosa", "Uno", "Fiat", "2012");
+        let c2 = new Carro("Azul", "Gol", "Volkswagem", "2015");
+        c1.informar()
+        c2.informar()
+        c1.cor = "Vermelho";
+        c1.informar()
+    </script>
+</body>
+</html>

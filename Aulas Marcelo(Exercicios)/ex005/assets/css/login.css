@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: image('assets/images/wallpaper.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #00000080;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px 0px #ffffff80;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(63, 63, 241);
+}
+
+#msgErro {
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+#msgSucesso {
+    text-align: center;
+    color: #00ff00;
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+.rotulo-flutuante input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid rgb(63, 63, 241);
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+    color: rgb(63, 63, 241);
+}
+
+.rotulo-flutuante {
+    position: relative;
+    padding-top: 15px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.rotulo-flutuante img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    color: rgb(255, 255, 255);
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.rotulo-flutuante input:focus {
+    border-bottom: 3px solid rgb(100, 100, 160);
+}
+
+.rotulo-flutuante label {
+    color: rgb(122, 122, 199);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    margin: 15px;
+    transition: all .3s ease-out;
+}
+
+.rotulo-flutuante input:focus+label,
+.rotulo-flutuante input:valid+label {
+    font-size: 15px;
+    margin: 0;
+    color: rgb(122, 122, 199);
+    transition: .3s;
+}
+
+button {
+    background-color: transparent;
+    border-color: rgb(63, 63, 241);
+    color: rgb(63, 63, 241);
+    padding: 7px;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+}
+
+button:hover {
+    background-color: rgb(63, 63, 241);
+    color: white;
+}
+
+.centralizado {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+p {
+    color: rgb(63, 63, 241);
+    font-size: 14px;
+    text-align: center;
+}
+
+a {
+    color: rgb(63, 63, 241);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightgray;
+    cursor: pointer;
+    transition: all .1s ease-out;
+}

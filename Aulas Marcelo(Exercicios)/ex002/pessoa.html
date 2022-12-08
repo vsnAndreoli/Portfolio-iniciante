@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pessoa</title>
+</head>
+<body>
+    <script>
+        class Pessoa {
+            constructor(nome, idade, rg, ocupacao) {
+                this.nome = nome
+                this.idade = idade
+                this.rg = rg
+                this.ocupacao = ocupacao
+                //console.log(this.nome + "," + this.idade + "," + this.rg)
+            }
+            informar() {
+                console.log("Informações de cadastro: ")
+                console.log("Nome....:" + this.nome)
+                console.log("Idade...:" + this.idade)
+                console.log("RG......:" + this.rg)
+                console.log("Ocupação:" + this.ocupacao)
+            }
+        }
+        let p1 = new Pessoa("Maria", "30", "4444444-4", "Trabalhando")
+        let p2 = new Pessoa("João", "40", "5555555-5", "Dormindo")
+        p1.informar()
+        p2.informar()  
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+#Fconf{
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    border: 1px solid black;
+    background-color: grey;
+    opacity: .8;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+.fechar{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}

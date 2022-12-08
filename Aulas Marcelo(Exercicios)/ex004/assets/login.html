@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Login</title>
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="assets/css/login.css">
+
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-login">
+            <div class="wrap-login">
+                <form class="login-form">
+                    <span class="login-form-title">
+                        Faça o seu Login
+                    </span><br>
+                    <div class="wrap-input margin-top35 margin-bottom-35">
+                        <input type="text" class="input-form" name="email">
+                        <span class="focus-input-form" data-placeholder="E-mail"></span>
+                    </div>
+                    <div class="wrap-input margin-bottom-35">
+                        <input type="password" id="senha" class="input-form" name="password" >
+                        <span class="focus-input-form" data-placeholder="Senha"></span>
+                        <img src="assets/images/ocultar.png" onclick="visualizar()" class="olho">
+                        
+                    </div>
+                    <div class="container-login-form-btn">
+                        <button class="login-form-btn">
+                            Login
+                        </button>
+                    </div>
+                    <ul class="login-utils">
+                        <li class="margin-bottom-8 margin-top-8">
+                            <span class="texto1">
+                                Esqueceu sua
+                            </span>
+                            <a href="#" class="texto2">
+                                Senha?
+                            </a>
+                        </li>
+                        <li>
+                            <span class="texto1">
+                                Não tem conta?
+                            </span>
+                            <a href="#" class="texto2">
+                                Criar
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+            </form>
+            <img src="assets/images/login.png" alt="login" width="300" height="300" class="margin-left-50">
+        </div>
+    </div>
+    <script src="assets/js/login.js"></script>
+
+</body>
+
+</html>

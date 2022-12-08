@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Links -->
+    <link rel="stylesheet" href="assets/css/login.css">
+    <script src="assets/js/login.js"></script>
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Entrar</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>LOGIN</h1>
+            <div id="msgErro"></div>
+
+            <div class="rotulo-flutuante">
+                <input type="text" id="usuario" placeholder="" required>
+                <label for="usuario" id="labelUsuario">Usuário</label>
+            </div>
+
+            <div class="rotulo-flutuante">
+                <input type="password" id="senha1" placeholder="" required>
+                <label for="senha" id="labelSenha">Senha</label>
+                <img src="assets/images/ocultar.png" class="olho" onclick="mostrar()">
+            </div>
+
+            <div class="centralizado">
+                <button onclick="entrar()">Acessar</button>
+            </div>
+
+            <div class="centralizado">
+                <hr>
+            </div>
+
+            <p>Não tem conta? <a href="#">Cadastre-se</a></p><br>
+
+            <p>Esqueceu a senha? <a href="#">Recuperar</a></p>
+
+            <div id="msgSucesso"></div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
