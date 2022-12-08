@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu drop down</title>
+    <link rel="stylesheet" href="assets/css/09-css.css">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+            <div class="menu1" id="menu1">Home</div>
+            <div class="menu2" id="menu2">
+                <a href="#">Opção 1</a><br>
+                <a href="#">Opção 2</a><br>
+                <a href="#">Opção 3</a><br>
+            </div>
+        </li>
+            <li>Menu 2</li>
+            <li>
+                <div class="menu1" id="menu1">Menu 3</div>
+                <div class="menu2" id="menu2">
+                    <a href="#">Opção 1</a><br>
+                    <a href="#">Opção 2</a><br>
+                    <a href="#">Opção 3</a><br>
+                    <a href="#">Opção 4</a><br>
+                    <a href="#">Opção 5</a><br>
+                    <a href="#">Opção 6</a><br>
+                    <a href="#">Opção 7</a><br>
+                    <a href="#">Opção 8</a><br>
+                </div>
+            </li>
+            <li>Menu 4</li>
+        </ul>
+    </div>
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("li").hover(function(){
+                $(this).find(".menu2").show();
+            }, function(){
+                $(this).find(".menu2").hide();
+            });
+        });
+    </script>
+</body>
+</html>

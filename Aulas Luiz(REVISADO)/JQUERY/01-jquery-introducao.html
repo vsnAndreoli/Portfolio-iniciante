@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>01-jquery-introducao</title>
+</head>
+<body>
+    <h1>Este é um H1 e deve ser escondido assim que eu clicar o botão abaixo.</h1>
+    <br>
+    <button>Esconder o H1</button>
+    <button id="mostrar">Mostrar o h1</button>
+    <P id="teste"></P>
+    <!-- Aqui iniciamos o Script -->
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        //aqui vai os comandos  do JQuery
+        $("#teste").html("Meu teste funcionou.");
+        $("button").click(function(){
+            $("h1").hide();
+        })
+        $("#mostrar").click(function(){
+            $("h1").show();
+        })
+    </script>
+</body>
+</html>

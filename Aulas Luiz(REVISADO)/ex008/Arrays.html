@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        var arr = new Array(70, 24, 5, 19, 23, 30, 75, 27);
+        var somaPar = 0;
+        var maior = arr[0];
+        var menor = arr[0];
+        for (var i = 0; i < arr.length; i++) {
+            console.log(i);
+            console.log(arr[i]);
+            if (arr[i] % 2 === 0) {
+                somaPar += arr[i];
+
+            }
+            if (arr[i] < arr[i + 1] && maior < arr[i + 1]) {
+                maior = arr[i + 1];
+
+            }
+            if (menor > arr[i]){
+                menor = arr[i + 1];
+            }
+        }
+        alert("A soma dos pares é: " + somaPar);
+        alert("O maior número da Array é: " + maior);
+        alert("O menor número da Array é: " + menor);
+    </script>
+</body>
+</html>

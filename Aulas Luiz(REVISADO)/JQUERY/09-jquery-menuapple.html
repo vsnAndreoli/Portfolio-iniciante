@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu apple</title>
+    <link rel="stylesheet" href="assets/css/10-css.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="icone"></div>
+        <div class="icone"></div>
+        <div class="icone"></div>
+        <div class="icone"></div>
+        <div class="icone"></div>
+        <div class="icone"></div>
+        <div class="icone"></div>
+        <div class="icone"></div>
+        <div class="icone"></div>
+    </div>
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".icone").hover(function () {
+                $(this).animate({
+                    "width": 100,
+                    "height": 100,
+                    "margin-top": -30
+                }, 200);
+            }, function(){
+                $(this).animate({
+                    "width": 70,
+                    "height": 70,
+                    "margin-top": 0
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>

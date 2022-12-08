@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 3</title>
+</head>
+<body>
+    <!--Add botão na página-->
+    <h1>Chamando Funções</h1>
+    <button onclick="pares()">Clique aqui para gerar pares</button>
+    <script>
+        //pares();
+        function pares() {
+            //Peça um número inicial (n1) 
+            var n1 = parseInt(prompt("Número inicial"));
+            //Peça um número final (n2).
+            var n2 = parseInt(prompt("Número final"));
+            //Peça os números entre (n1) e (n2).
+            for (n1; n1 <= n2; n1++) {
+                if (n1 % 2 === 0) {
+                    document.write("Aqui os números pares:" + n1 + "<br>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

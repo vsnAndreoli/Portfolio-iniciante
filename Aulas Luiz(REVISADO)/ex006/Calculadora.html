@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <button onclick="soma()">+</button>
+    <button onclick="sub()">-</button>
+    <br>
+    <button onclick="mul()">*</button>
+    <button onclick="divi()">/</button>
+    <br>
+    <br>
+    <div id="output"> </div>
+    <script>
+        //Pedir número
+        var n1 = parseFloat(prompt("Digite um número."))
+        escreve();
+        //Função
+        function escreve() {
+            var output = document.querySelector("#output");
+            output.innerHTML = n1;
+        }
+        //Função de soma
+        function soma() {
+            //Pedir um número
+            var n = parseFloat(prompt("Digite um número."));
+            //Fazer a soma
+            n1 += n; //N1 = N1+N
+            //Função escreve
+            escreve();
+        }
+        //Função de subtrair
+        function sub() {
+            //Pedir um número
+            var n = parseFloat(prompt("Digite um número."));
+            //Fazer a subtração
+            n1 -= n;
+            //Função escreve
+            escreve();
+        }
+        //Função de multiplicação
+        function mul() {
+            //Pedir um número
+            var n = parseFloat(prompt("Digite um número"));
+            //Fazer a multiplicação
+            n1 *= n;
+            //Função escreve
+            escreve();
+        }
+        //Função de divisão
+        function divi() {
+            //Pedir um número
+            var n = parseFloat(prompt("Digite um número"));
+            //Fazer a divisão
+            n1 /= n;
+            //Função escreve
+            escreve();
+        }
+    </script>
+</body>
+</html>

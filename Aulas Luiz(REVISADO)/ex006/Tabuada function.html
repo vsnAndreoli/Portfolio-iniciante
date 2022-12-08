@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabuada Funções</title>
+</head>
+<body>
+    <h1>Funções Tabuada</h1>
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+    <button onclick="limparTabuada()">Limpar Tabuada</button>
+    <div id="output"> </div>
+
+    <script>
+        function gerarTabuada() {
+            var output = document.querySelector("#output");
+            var mensagem = "";
+            var n = parseInt(prompt("Digite um número"));
+            for (var i = 0; i <= 100; i++) {
+                mensagem += "Tabuada de " + n + "X" + i + "=" + n * i + "<br>";
+            }
+            output.innerHTML = mensagem;
+        }
+        function limparTabuada() {
+            var mensagem = "";
+            output.innerHTML = mensagem;
+        }
+    </script>
+</body>
+</html>

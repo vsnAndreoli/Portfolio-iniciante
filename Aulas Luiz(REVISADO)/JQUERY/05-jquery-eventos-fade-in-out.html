@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>05-jquery-eventos-fade-in-out</title>
+</head>
+<body>
+    <h1>Botão para desaparecer e aparecer</h1>
+    <span id="mensagem"></span>
+    <button id="desaparecer">Esconder parágrafo</button>
+    <button id="aparecer">Mostrar parágrafo</button>
+    <p>Parágrafo que vamos mudar para azul</p>
+    <span id="mensagem"></span>
+    <button id="azul">Mudar parágrafo para azul</button>
+    <!-- Aqui iniciamos o Script -->
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        //preparando o jQuery
+        $(document).ready(function(){
+          $("#azul").click(function(){
+           $("p").css("background-color", "blue");
+           $("p").fadeOut(); 
+           $("p").delay(1000);
+           $("p").fadeIn();
+          })
+         });
+         $(document).ready(function(){
+          $("#desaparecer").click(function(){
+           $("h1").fadeOut(); 
+          })
+         });
+         $(document).ready(function(){
+          $("#aparecer").click(function(){
+           $("h1").fadeIn(); 
+          })
+         });
+    </script>
+</body>
+</html>

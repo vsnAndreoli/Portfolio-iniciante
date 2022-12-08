@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>02-jquery-seletores</title>
+</head>
+<body>
+    <p>Este é um parágrafo.</p>
+    <p id="teste">Este é um parágrafo com ID Teste</p>
+    <p class="p-yellow">Este parágrafo tem uma classe p-yellow</p>
+    <button>Mudar P-Yellow</button>
+    <!-- Aqui iniciamos o Script -->
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        //preparando o jQuery
+        $(document).ready(function () {
+            $("#teste").click(function () {
+                $(this).html("Mudei o texto e aqui é um <b>bold</b>");
+            });
+            $("button").click(function () {
+                $(".p-yellow").text("Mudando o texto usando text.");
+                $(".p-yellow").css("color", "orange");
+        });
+        });
+    </script>
+</body>
+</html>

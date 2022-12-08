@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>04-jquery-eventos-focus</title>
+</head>
+<body>
+   <!-- Criar uma ciaxa de texto -->
+    <input type="text" id="campotexto" style="padding:20px;"
+    placeholder="Digite aqui o seu nome">
+    <br>
+    <input type="text" id="campoemail" style="padding:20px;"
+    placeholder="Digite aqui o seu email">
+    <!-- Aqui iniciamos o Script -->
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        //preparando o jQuery
+        $(document).ready(function(){
+            $("#campotexto").blur(function(){
+                $(this).css("background-color", "yellow");
+            });
+            $("#campoemail").blur(function(){
+                $(this).css("background-color", "yellow");
+            });
+         });
+    </script>
+</body>
+</html>

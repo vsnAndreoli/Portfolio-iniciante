@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeiro Array</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var produtos = new Array("caneta", "lápis", "tesoura", "livro");
+        produtos.push("apontador", "grafite", "transferidor");
+        var output = document.querySelector("#output");
+        var msg = "";
+        for (var i = 0; i < produtos.length; i++) {
+            msg += "Produto " + (i + 1) + ": " + produtos[i] + "<br>";
+        }
+        output.innerHTML = msg;
+    </script>
+</body>
+</html>

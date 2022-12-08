@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Nota - Aprovado ou Reprovado</title>
+</head>
+<body>
+    <h1>Aluno Aprovado ou Reprovado</h1>
+    <script>
+        //Aluno digita a primeira nota
+        var n1 = parseInt(prompt("Digite sua nota 1"));
+        //Aluno digita a segunda nota
+        var n2 = parseFloat(prompt("Digite sua nota 2"));
+        //Aluno digita a quantidade de faltas
+        var n3 = faltas = parseInt(prompt("Digite o total de faltas"));
+        //Calcular a média
+        var media = (n1 + n2) / 2;
+        alert(media);
+        //Verificar se a média do aluno é maior ou igual a 6
+        if (media >= 6 && faltas < 10) {
+            alert("Parabéns, você foi aprovado!")
+        }
+        if (media < 6 && faltas >= 10) {
+            alert("Poxa! Você reprovou. ")
+        }
+        if (media < 6 && faltas < 10) {
+            alert("Você esta de exame!")
+        }
+        else {
+            alert("Poxa! Você não foi aprovado.")
+        }
+        //alert do resultado Aprovado ou Reprovado
+    </script>
+</body>
+</html>

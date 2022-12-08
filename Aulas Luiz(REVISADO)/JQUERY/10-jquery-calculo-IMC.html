@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/08-css.css">
+    <title>Calculo IMC</title>
+</head>
+<body>
+    <!-- IMC dividindo o peso (em kg) pela altura ao quadrado (em metros) -->
+    <div class="geral">
+        <span>Digite seu peso em kg</span><br>
+        <input type="text" name="peso" id="peso"><br>
+        <hr>
+        <span>Digite sua altura em m (exemplo: 1,75)</span><br>
+        <input type="text" name="altura" id="altura"><br>
+        <hr>
+        <button id="calc">Calcular IMC</button>
+        <div class="resul" id="resultado"></div>
+    </div>
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#calc").click(function () {
+                $("#resultado").slideToggle("slow");
+            });
+            $("button").click(function () {
+                var peso = $("#peso").val();
+                var altura = $("#altura").val();
+                peso = peso.replace(',', '.');
+                altura = altura.replace(',', '.');
+                //calculo do IMC
+                var imc = peso / (altura * altura);
+                //if e else if para mostrar a classificação do IMC
+                /* 
+                Menos do que 18,5:   Abaixo do peso
+                Entre 18,5 e 24,9:   Peso normal
+                Entre 25 e 29,9:     Sobrepeso
+                Entre 30 e 34,9:     Obesidade grau 1
+                Entre 35 e 39,9:     Obesidade grau 2
+                Mais do que 40:      Obesidade grau 3 
+                */
+
+                if(imc<18.5){
+                    var classi = "Você está abaixo do peso."
+                }else{
+                    if(imc>=18.5 && imc<=24.9){
+                        var classi = "Você está no Peso Ideal."
+                    }else{
+                        if(imc>=25 && imc<=29.9){
+                            var classi = "Você está com Sobrepeso."
+                        }else{
+                            if(imc>=30 && imc<=34.9){
+                                var classi = "Você está com Obesidade grau l."
+                            }else{
+                                if(imc>=35 && imc<=39.9){
+                                    var classi = "Você está com Obesidade grau ll."
+                                }else{
+                                    if(imc>=40){
+                                        var classi = "Você está com Obesidade grau lll."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                };
+
+                //OU: peso / altura**2
+                $("#resultado").html("O seu IMC é de: " + imc.toFixed(2) +".<br>"+ classi);
+            });
+            //if e else if para mostrar a classificação do IMC
+            /* 
+            Menos do que 18,5:   Abaixo do peso
+            Entre 18,5 e 24,9:   Peso normal
+            Entre 25 e 29,9:     Sobrepeso
+            Entre 30 e 34,9:     Obesidade grau 1
+            Entre 35 e 39,9:     Obesidade grau 2
+            Mais do que 40:      Obesidade grau 3 
+            */
+        });
+    </script>
+</body>
+</html>

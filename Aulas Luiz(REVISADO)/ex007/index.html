@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch</title>
+</head>
+<body>
+    <h1>Usando o Switch</h1>
+    <!--Digitar valores de 1 a 4 e em cada número mostrar uma mensagem diferente.-->
+    <script>
+        calcula();
+        function calcula() {
+            var n = parseInt(prompt("Digite um valor de 1 a 4"));
+            if (n >= 1 && n <= 4) {
+                switch (n) {
+                    case 1:
+                        document.write("Olá, você digitou o 1");
+                        break;
+                    case 2:
+                        document.write("Olá, que dia lindo, você digitou o 2");
+                        break;
+                    case 3:
+                        document.write("Olá. Você está no CTTI. Você digitou o 3");
+                        break;
+                    case 4:
+                        document.write("Hoje é programação, você digitou o 4");
+                }
+            }
+            else {
+                alert("Poxa! O número precisa ser de 1 a 4.");
+                calcula();
+            }
+        }
+    </script>
+</body>
+</html>

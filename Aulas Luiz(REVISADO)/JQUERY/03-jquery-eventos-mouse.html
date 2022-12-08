@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>03-jquery-eventos-mouse</title>
+</head>
+<body>
+    <button>Passe o mouse</button>
+    <!-- Aqui iniciamos o Script -->
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        //preparando o jQuery
+        $(document).ready(function () {
+           $("button").hover(function(){
+                $(this).text("Mouse entrou");
+           },
+           function(){
+                $(this).text("Saiu o mouse");
+           }
+           )
+         });
+    </script>
+</body>
+</html>

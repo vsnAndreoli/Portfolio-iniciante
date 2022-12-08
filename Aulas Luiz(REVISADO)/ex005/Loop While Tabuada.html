@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop While - Tabuada</title>
+</head>
+<body>
+    <script>
+        //pedir um número para a tabuada.
+        var n = parseInt(prompt("Tabuada de qual número?"));
+        //dar um valor para o contador
+        var contador = 1;
+        //mostrar na tela o resutlado.
+        while (contador <= 10) {
+            document.write("A tabuada de " + n + "X" + contador + " é: " + n * contador + "<br>");
+            contador = contador + 1;
+        }
+        //final do loop
+        document.write("Saiu do loop");
+    </script>
+</body>
+</html>

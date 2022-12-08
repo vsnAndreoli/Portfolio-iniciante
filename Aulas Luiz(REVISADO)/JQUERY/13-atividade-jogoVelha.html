@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da velha #</title>
+    <!-- CSS -->
+    <style>
+        .area {
+            width: 80px;
+            height: 65px;
+            border: 2px solid black;
+            float: left;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .placar {
+            width: 250px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!--HTML5-->
+    <div class="placar">
+        É a vez de : <br>
+        <img src="" alt="" height="50">
+    </div>
+    <div class="area a1"></div>
+    <div class="area a2"></div>
+    <div class="area a3"></div>
+    <div style="clear:both"></div>
+    <div class="area b1"></div>
+    <div class="area b2"></div>
+    <div class="area b3"></div>
+    <div style="clear:both"></div>
+    <div class="area c1"></div>
+    <div class="area c2"></div>
+    <div class="area c3"></div>
+    <!--Scripts-->
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        var vez = "o"
+        function atualizarPlacar() {
+            if (vez == "o") {
+                $(".placar img").attr("src", "assets/images/o.png")
+            } else {
+                $(".placar img").attr("src", "assets/images/x.png")
+            }
+        }
+        /* Guardar nas variáveis se é "O" ou "X"*/
+        function verificarCampeao() {
+            var a1 = $(".a1").attr("data-marcado");
+            var a2 = $(".a2").attr("data-marcado");
+            var a3 = $(".a3").attr("data-marcado");
+
+            var b1 = $(".b1").attr("data-marcado");
+            var b2 = $(".b2").attr("data-marcado");
+            var b3 = $(".b3").attr("data-marcado");
+
+            var c1 = $(".c1").attr("data-marcado");
+            var c2 = $(".c2").attr("data-marcado");
+            var c3 = $(".c3").attr("data-marcado");
+
+            var ganhador = "";
+
+            for (var i = 0; i <= 1; i++) {
+                if (i == 0) {
+                    var op = "o";
+                } else {
+                    var op = "x";
+                }
+                /* Checar quem foi o vencedor Horizontal. */
+                if (a1 == op && a2 == op && a3 == op) {
+                    ganhador = op
+                }
+                else if (b1 == op && b2 == op && b3 == op) {
+                    ganhador = op
+                }
+                else if (c1 == op && c2 == op && c3 == op) {
+                    ganhador = op
+                }
+                /*Checar quem foi o vencedor Vertical. */
+                else if (a1 == op && b1 == op && c1 == op) {
+                    ganhador = op
+                }
+                else if (a2 == op && b2 == op && c2 == op) {
+                    ganhador = op
+                }
+                else if (a3 == op && b3 == op && c3 == op) {
+                    ganhador = op
+                }
+                /*Checar quem Foi o vencedor Diagonal. */
+                else if (a1 == op && b2 == op && c3 == op) {
+                    ganhador = op
+                }
+                else if (a3 == op && b2 == op && c1 == op) {
+                    ganhador = op
+                }
+            }
+            /* If para verificar se existe algum vencedor. */
+            if (ganhador != "") {
+                if (ganhador == "o") {
+                    alert("O vencedor foi: O");
+                } else {
+                    alert("O vencedor foi: X");
+                }
+
+                $(".area").html("");
+                $(".area").attr("data-marcado", "");
+
+            }
+
+            /* Else if para verificar se o jogo teve um empate. */
+            else if (a1 != "" && a2 != "" && a3 != "" && b1 != "" && b2 != "" && b3 != "" && c1 != "" && c2 != "" && c3 != "") {
+                alert("Empatou");
+                $(".area").html("");
+                $(".area").attr("data-marcado", "");
+            }
+        }
+
+        $(document).ready(function () {
+            atualizarPlacar();
+            $(".area").on("click", function () {
+                if ($(this).find("img").length == 0) {
+                    if (vez == "o") {
+                        $(this).html("<img src='assets/images/o.png' height='50px'/>");
+                        $(this).attr("data-marcado", "o");
+                        vez = "x";
+                    } else {
+                        $(this).html("<img src='assets/images/x.png' height='50px'/>");
+                        $(this).attr("data-marcado", "x");
+                        vez = "o";
+                    }
+                    atualizarPlacar();
+                    verificarCampeao();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

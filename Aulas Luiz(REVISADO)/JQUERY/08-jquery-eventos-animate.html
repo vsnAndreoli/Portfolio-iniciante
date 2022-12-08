@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>08-jquery-eventos-animate</title>
+</head>
+<body>
+    <p class="p"> Texto para ser animado.</p>
+    <button id="btn">Animar parágrafo</button>
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        $("p").css("background-color", "blue");
+        $(document).ready(function () {
+            $("p").click(function () {
+                $("div").animate({ left: '250px' });
+            });
+        })
+        $("button").click(function () {
+            $("div").animate({
+                left: '250px',
+                opacity: '0.5',
+                height: '150px',
+                width: '150px'
+            });
+        });
+    </script>
+</body>
+</html>

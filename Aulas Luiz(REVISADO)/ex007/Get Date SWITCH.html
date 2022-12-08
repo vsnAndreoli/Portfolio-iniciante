@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dia semana usando Switch</title>
+</head>
+<body>
+    <script>
+        data();
+        function data() {
+            var dia = new Date().getDay();
+            var mes = new Date().getMonth();
+            var hoje = new Date().getDate();
+            var ano = new Date().getFullYear();
+            switch (dia) {
+                case 0:
+                    dia = ("domingo");
+                    break;
+                case 1:
+                    dia = "segunda-feira";
+                    break;
+                case 2:
+                    dia = "terça-feira";
+                    break;
+                case 3:
+                    dia = "quarta-feira";
+                    break;
+                case 4:
+                    dia = "quinta-feira";
+                    break;
+                case 5:
+                    dia = "sexta-feira";
+                    break;
+                case 6:
+                    dia = "sábado";
+
+
+            }
+            switch (mes) {
+                case 0:
+                    mes = "Janeiro";
+                    break;
+                case 1:
+                    mes = "Fevereiro";
+                    break;
+                case 2:
+                    mes = "Março";
+                    break;
+                case 3:
+                    mes = "Abril";
+                    break;
+                case 4:
+                    mes = "Maio";
+                    break;
+                case 5:
+                    mes = "Junho";
+                    break;
+                case 6:
+                    mes = "Julho";
+                    break;
+                case 7:
+                    mes = "Agosto";
+                    break;
+                case 8:
+                    mes = "Setembro";
+                    break;
+                case 9:
+                    mes = "Outubro";
+                    break;
+                case 10:
+                    mes = "Novembro";
+                    break;
+                case 11:
+                    mes = "Dezembro";
+
+            }
+
+            alert("Ibiporã, " + " " + dia + " " + hoje + " " + mes + " " + ano);
+            //Ibiporã, quarta-feira dia 24 de agosto de 2022.
+        }
+    </script>
+</body>
+</html>

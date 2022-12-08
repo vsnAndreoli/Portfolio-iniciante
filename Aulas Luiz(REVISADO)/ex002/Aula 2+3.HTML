@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> HTML + CSS</title>
+    <!--NOTA: Todo documento que se encontra em "style" faz parte de CSS e será afetado pelas mudanças solicitadas.-->
+    <style>
+        h1 {
+            color: rgb(38, 18, 151);
+        }
+        body {
+            background-color: rgb(19, 141, 90);
+            background-image: url(primeira_pagina/assets/images/mario.png);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-attachment: fixed;
+        }
+        h1,
+        h2,
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        H2 {
+            font-variant: small-caps;
+        }
+        p {
+            font-size: 12px;
+        }
+        p.diferente {
+            color: bisque;
+        }
+        a:link {
+            color: greenyellow
+        }
+        a:link {
+            color: yellow;
+            text-decoration: solid;
+        }
+        a:hover {
+            color: green;
+            text-decoration: overline;
+            font-weight: bolder;
+        }
+        .indentacao {
+            text-indent: 45px;
+        }
+        table, tr, td, th {
+            border: 2px solid red;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML com CSS</h1>
+    <h2>Usando estilos em cascata para
+        aplicar cores, formas, tamanhos
+        em nossos elementos.</h2>
+    <a href="http://www.nintendo.com" target="_blank"> CLIQUE AQUI</a>
+    <p class="diferente">Vários parágrafos.</p>
+    <p class="diferente">Vários parágrafos.</p>
+    <p class="diferente">Vários parágrafos.</p>
+    <p class="diferente">Vários parágrafos.</p>
+    <p class="diferente">Vários parágrafos.</p>
+    <p class="diferente">Vários parágrafos.</p>
+    <p>Vários parágrafos.</p>
+    <p>Vários parágrafos.</p>
+    <!-- TR= Table Row - Linha da tabela -->
+    <!-- TD= Table Data - Coluna da tabela -->
+<thead>
+    <table>
+        <tr>
+            <td>Cód.</td>
+            <td>Nome Cliente</td>
+            <td>Sobrenome</td>
+            <td>CPF</td>
+        </tr>
+        <tr>
+            <td>155</td>
+            <td>Guilherme</td>
+            <td>Andreoli</td>
+            <td>123</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>y</td>
+            <td>y</td>
+            <td>y</td>
+            <td>y</td>
+        </tr>
+    </table>
+ </thead>
+</body>
+</html>

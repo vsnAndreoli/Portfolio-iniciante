@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>07-jquery-eventos-toggle.html</title>
+</head>
+<body>
+    <p class="p"> Texto para ser mostrado e escondido.</p>
+    <button id="btn">Esconder e mostrar parágrafo</button>
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("p").toggle("slow");
+            });
+        })
+    </script>
+</body>
+</html>

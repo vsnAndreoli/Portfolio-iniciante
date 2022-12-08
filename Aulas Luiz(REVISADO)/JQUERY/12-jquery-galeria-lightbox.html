@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Usando Jquery - Lightbox</title>
+    <!-- CSS -->
+    <style>
+        .bgbox {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+        }
+        .divbox {
+            position: fixed;
+            width: 800px;
+            height: 600px;
+            left: 50%;
+            top: 50%;
+            background-color: white;
+            margin-left: -430px;
+            margin-top: -330px;
+            padding: 30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!--Divs que receberão a imagem e o fundo escuro-->
+    <div class="bgbox"></div>
+    <div class="divbox">
+        <button>FECHAR</button>
+        <img src="" alt="">
+    </div>
+    <!--HTML5-->
+    <a href="#" class="galeria"> <img src="assets/images/wall-01.jpg" alt="" width="150"> </a>
+    <a href="#" class="galeria"> <img src="assets/images/wall-02.jpg" alt="" width="150"> </a>
+    <a href="#" class="galeria"> <img src="assets/images/wall-03.jpg" alt="" width="150"> </a>
+    <a href="#" class="galeria"> <img src="assets/images/wall-04.jpg" alt="" width="150"> </a>
+    <a href="#" class="galeria"> <img src="assets/images/wall-05.jpg" alt="" width="150"> </a>
+    <!--Scripts-->
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a.galeria").on("click", function () {
+                var img = $(this).find("img").attr("src");
+                $(".divbox img").attr("src", img);
+                $(".bgbox, .divbox").fadeIn("fast");
+                console.log(img);
+            });
+            $(".bgbox, .divbox button").on("click", function () {
+                $(".bgbox").fadeOut("fast");
+                $(".divbox").fadeOut("fast");
+            });
+        });
+    </script>
+</body>
+</html>
